@@ -1,6 +1,6 @@
 #---
 # Excerpted from "Everyday Scripting in Ruby"
-# We make no guarantees that this code is fit for any purpose. 
+# We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/bmsft for more book information.
 #---
 old_inventory = File.open('old-inventory.txt').readlines
@@ -12,3 +12,10 @@ puts new_inventory - old_inventory
 puts ""
 puts "The following files have been deleted:"
 puts old_inventory - new_inventory
+
+
+puts "The number of the files added in old-inventory:"
+puts (new_inventory - old_inventory).length
+
+puts "The number of the files deleted in old-inventory:"
+puts (old_inventory - new_inventory).length
